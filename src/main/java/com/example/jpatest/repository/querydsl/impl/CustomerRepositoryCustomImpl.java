@@ -16,6 +16,7 @@ public class CustomerRepositoryCustomImpl implements CustomerRepositoryCustom {
     public CustomerRepositoryCustomImpl(JPAQueryFactory jpaQueryFactory){
         this.jpaQueryFactory = jpaQueryFactory;
     }
+
     @Override
     public Optional<Customer> findByCustomerId(Long customerId){
         return Optional.ofNullable(jpaQueryFactory.selectFrom(customer)

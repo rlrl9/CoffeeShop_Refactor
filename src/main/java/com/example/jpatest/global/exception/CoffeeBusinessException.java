@@ -6,6 +6,7 @@ import lombok.Getter;
 @Getter
 public class CoffeeBusinessException extends RuntimeException{
     private final CoffeeExceptionInfo coffeeExceptionInfo;
+
     @Builder
     public CoffeeBusinessException(CoffeeExceptionInfo coffeeExceptionInfo) {
         super(coffeeExceptionInfo.getMessage());
